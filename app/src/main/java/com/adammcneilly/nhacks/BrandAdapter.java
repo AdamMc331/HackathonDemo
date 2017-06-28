@@ -8,22 +8,32 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
 /**
- * Created by adam.mcneilly on 6/17/17.
+ * Adapter that is responsible for displaying a list of brands in a RecyclerView.
  */
-
+@SuppressWarnings("WeakerAccess")
 public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHolder> {
 
+    /**
+     * The brands that will be displayed.
+     */
     private List<Brand> brands;
 
+    /**
+     * Basic constructor.
+     *
+     * @param brands The collection of brands to display.
+     */
     public BrandAdapter(List<Brand> brands) {
         this.brands = brands;
     }
 
+    /**
+     * Called when the RecyclerView needs to create a ViewHolder for a specific view type.
+     */
     @Override
     public BrandViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
@@ -31,6 +41,9 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
         return new BrandViewHolder(view);
     }
 
+    /**
+     * Called by the RecyclerView to bind data to the view holder at this position.
+     */
     @Override
     public void onBindViewHolder(BrandViewHolder holder, int position) {
         Brand item = brands.get(position);

@@ -1,9 +1,9 @@
 package com.adammcneilly.nhacks;
 
 /**
- * Created by adam.mcneilly on 6/17/17.
+ * Represents a company to display in the app.
  */
-
+@SuppressWarnings("WeakerAccess")
 public class Brand {
     private String name;
     private int logoResource;

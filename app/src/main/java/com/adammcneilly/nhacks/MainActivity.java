@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * Main activity that displays the image view and button used.
+ */
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView myImageView;
-    private Button myButton;
     private boolean showPenguin = true;
 
     @Override
@@ -18,33 +19,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myImageView = (ImageView) findViewById(R.id.my_image_view);
-        myButton = (Button) findViewById(R.id.my_button);
+        // Get the view references
+        final ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
+        final Button myButton = (Button) findViewById(R.id.my_button);
 
-//        myButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                showPenguin = !showPenguin;
-//
-//                int resource;
-//                if (showPenguin) {
-//                    resource = R.drawable.penguin;
-//                } else {
-//                    resource = R.drawable.walrus;
-//                }
-//
-//                myImageView.setImageResource(resource);
-//            }
-//        });
-
+        // Set a click listener on the button to toggle the image
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Toggle the state
+                showPenguin = !showPenguin;
+
+                // Display corresponding image
+                int resource = showPenguin ? R.drawable.penguin : R.drawable.walrus;
+                myImageView.setImageResource(resource);
+            }
+        });
+
+        // Set a long click listener on the button to start our brand activity
+        myButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
                 startBrandActivity();
+                return true;
             }
         });
     }
 
+    /**
+     * Starts the BrandActivity.
+     */
     private void startBrandActivity() {
         Intent intent = new Intent(MainActivity.this, BrandActivity.class);
         startActivity(intent);
