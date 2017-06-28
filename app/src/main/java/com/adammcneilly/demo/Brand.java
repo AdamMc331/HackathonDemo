@@ -1,4 +1,4 @@
-package com.adammcneilly.nhacks;
+package com.adammcneilly.demo;
 
 /**
  * Represents a company to display in the app.

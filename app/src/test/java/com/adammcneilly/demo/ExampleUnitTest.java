@@ -1,4 +1,4 @@
-package com.adammcneilly.nhacks;
+package com.adammcneilly.demo;
 
 import org.junit.Test;
 

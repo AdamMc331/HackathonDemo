@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NHacks</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="animal">Animal</string>
 </resources>

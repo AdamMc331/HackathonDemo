@@ -1,4 +1,4 @@
-package com.adammcneilly.nhacks;
+package com.adammcneilly.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
