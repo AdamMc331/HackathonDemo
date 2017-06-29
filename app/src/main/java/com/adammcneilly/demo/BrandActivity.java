@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Activity used to display a list of brands to the user.
+ */
 public class BrandActivity extends AppCompatActivity {
 
     @Override

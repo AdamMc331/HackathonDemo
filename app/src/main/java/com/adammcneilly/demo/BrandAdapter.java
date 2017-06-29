@@ -50,29 +50,44 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
         holder.bindBrand(item);
     }
 
+    /**
+     * @return The number of items to display in the RecyclerView.
+     */
     @Override
     public int getItemCount() {
         return brands.size();
     }
 
+    /**
+     * ViewHolder represents a row in the Recyclerview.
+     */
     public class BrandViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        // Views
         private ImageView logo;
         private TextView name;
 
         public BrandViewHolder(View view) {
             super(view);
 
+            // Get view references
             logo = (ImageView) view.findViewById(R.id.brand_image);
             name = (TextView) view.findViewById(R.id.brand_name);
 
+            // Set click listener to view
             view.setOnClickListener(this);
         }
 
+        /**
+         * Binds a brand to this row.
+         */
         public void bindBrand(Brand item) {
             logo.setImageResource(item.getLogoResource());
             name.setText(item.getName());
         }
 
+        /**
+         * Handles a click on this row.
+         */
         @Override
         public void onClick(View v) {
             Brand brand = brands.get(getAdapterPosition());
