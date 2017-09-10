@@ -20,6 +20,12 @@ public class DetailActivity extends AppCompatActivity {
      */
     public static final String BRAND_NAME_KEY = "brandName";
 
+    /**
+     * Called when this activity is first displayed. Here we will get the views and populate them
+     * with information passed in through the intent.
+     *
+     * @param savedInstanceState Any details about the saved state of this activity, if necessary.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

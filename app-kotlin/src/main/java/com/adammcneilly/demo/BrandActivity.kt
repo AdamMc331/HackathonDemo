@@ -29,5 +29,8 @@ class BrandActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
+    /**
+     * List of hardcoded brands to display to the user.
+     */
     private val sampleBrands = listOf(Brand("Apple", R.drawable.apple), Brand("Facebook", R.drawable.facebook), Brand("Google", R.drawable.google), Brand("Microsoft", R.drawable.microsoft))
 }

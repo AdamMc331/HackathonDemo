@@ -33,6 +33,10 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
 
     /**
      * Called when the RecyclerView needs to create a ViewHolder for a specific view type.
+     *
+     * @param parent   The parent view that this ViewHolder would reside in.
+     * @param viewType The viewType for this particular ViewHolder. This is used if we want to return
+     *                 multiple types of ViewHolders.
      */
     @Override
     public BrandViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -43,6 +47,9 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
 
     /**
      * Called by the RecyclerView to bind data to the view holder at this position.
+     *
+     * @param holder   The ViewHolder to bind the row item to.
+     * @param position The position of this row in the RecyclerView.
      */
     @Override
     public void onBindViewHolder(BrandViewHolder holder, int position) {
@@ -62,10 +69,21 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
      * ViewHolder represents a row in the Recyclerview.
      */
     public class BrandViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        // Views
+        /**
+         * Holds the logo image for the brand.
+         */
         private ImageView logo;
+
+        /**
+         * Displays the name of the brand.
+         */
         private TextView name;
 
+        /**
+         * Default constructor.
+         *
+         * @param view The root view of the ViewHolder.
+         */
         public BrandViewHolder(View view) {
             super(view);
 
@@ -79,6 +97,8 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
 
         /**
          * Binds a brand to this row.
+         *
+         * @param item The item to be displayed.
          */
         public void bindBrand(Brand item) {
             logo.setImageResource(item.getLogoResource());
@@ -87,6 +107,8 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
 
         /**
          * Handles a click on this row.
+         *
+         * @param v The View that the user clicked.
          */
         @Override
         public void onClick(View v) {

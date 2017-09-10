@@ -12,8 +12,17 @@ import android.widget.ImageView;
  */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Boolean flag for whether we should show the penguin or the walrus.
+     */
     private boolean showPenguin = true;
 
+    /**
+     * Called when this activity is first created. Here we will get the views, populate the
+     * corresponding animal image, and handle the button clicks.
+     *
+     * @param savedInstanceState Any details about the saved state of this activity, if necessary.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -30,9 +30,7 @@ class BrandAdapter(private val brands: List<Brand>) : RecyclerView.Adapter<Brand
         holder.bindBrand(item)
     }
 
-    override fun getItemCount(): Int {
-        return brands.size
-    }
+    override fun getItemCount(): Int = brands.size
 
     inner class BrandViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         private val logo: ImageView = view.findViewById(R.id.brand_image) as ImageView
@@ -44,7 +42,7 @@ class BrandAdapter(private val brands: List<Brand>) : RecyclerView.Adapter<Brand
 
         fun bindBrand(item: Brand) {
             logo.setImageResource(item.logoResource)
-            name.setText(item.name)
+            name.text = item.name
         }
 
         override fun onClick(v: View) {

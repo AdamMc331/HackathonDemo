@@ -13,6 +13,12 @@ import java.util.List;
  */
 public class BrandActivity extends AppCompatActivity {
 
+    /**
+     * This is called when the activity is shown for the first time. We use this to get the brands,
+     * create our {@link BrandAdapter}, and setup the {@link RecyclerView}.
+     *
+     * @param savedInstanceState Any information about the saved state, if necessary.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
