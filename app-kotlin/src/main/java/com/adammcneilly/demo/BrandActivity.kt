@@ -24,7 +24,7 @@ class BrandActivity : AppCompatActivity() {
         val linearLayoutManager = LinearLayoutManager(this)
 
         // Setup RecyclerView
-        val recyclerView = findViewById(R.id.brand_list) as RecyclerView
+        val recyclerView = findViewById<RecyclerView>(R.id.brand_list)
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.adapter = adapter
     }
@@ -32,5 +32,10 @@ class BrandActivity : AppCompatActivity() {
     /**
      * List of hardcoded brands to display to the user.
      */
-    private val sampleBrands = listOf(Brand("Apple", R.drawable.apple), Brand("Facebook", R.drawable.facebook), Brand("Google", R.drawable.google), Brand("Microsoft", R.drawable.microsoft))
+    private val sampleBrands = listOf(
+            Brand("Apple", R.drawable.apple),
+            Brand("Facebook", R.drawable.facebook),
+            Brand("Google", R.drawable.google),
+            Brand("Microsoft", R.drawable.microsoft)
+    )
 }

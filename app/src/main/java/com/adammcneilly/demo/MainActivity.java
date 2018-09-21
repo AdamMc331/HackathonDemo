@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the view references
-        final ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
-        final Button myButton = (Button) findViewById(R.id.my_button);
+        final ImageView myImageView = findViewById(R.id.my_image_view);
+        final Button myButton = findViewById(R.id.my_button);
 
         // Set a click listener on the button to toggle the image
         myButton.setOnClickListener(new View.OnClickListener() {

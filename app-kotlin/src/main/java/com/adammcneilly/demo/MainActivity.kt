@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Get the view references
-        val myImageView = findViewById(R.id.my_image_view) as ImageView
-        val myButton = findViewById(R.id.my_button) as Button
+        val myImageView: ImageView = findViewById(R.id.my_image_view)
+        val myButton: Button = findViewById(R.id.my_button)
 
         // Set a click listener on the button to toggle the image
         myButton.setOnClickListener {

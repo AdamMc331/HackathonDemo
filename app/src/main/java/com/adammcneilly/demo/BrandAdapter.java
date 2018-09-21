@@ -2,6 +2,7 @@ package com.adammcneilly.demo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,8 +39,9 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
      * @param viewType The viewType for this particular ViewHolder. This is used if we want to return
      *                 multiple types of ViewHolders.
      */
+    @NonNull
     @Override
-    public BrandViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BrandViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.list_item_brand, parent, false);
         return new BrandViewHolder(view);
@@ -52,7 +54,7 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
      * @param position The position of this row in the RecyclerView.
      */
     @Override
-    public void onBindViewHolder(BrandViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BrandViewHolder holder, int position) {
         Brand item = brands.get(position);
         holder.bindBrand(item);
     }
@@ -88,8 +90,8 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
             super(view);
 
             // Get view references
-            logo = (ImageView) view.findViewById(R.id.brand_image);
-            name = (TextView) view.findViewById(R.id.brand_name);
+            logo = view.findViewById(R.id.brand_image);
+            name = view.findViewById(R.id.brand_name);
 
             // Set click listener to view
             view.setOnClickListener(this);
@@ -112,12 +114,15 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
          */
         @Override
         public void onClick(View v) {
+            // Get the brand
             Brand brand = brands.get(getAdapterPosition());
 
+            // Build an intent
             Intent intent = new Intent(v.getContext(), DetailActivity.class);
             intent.putExtra(DetailActivity.BRAND_LOGO_KEY, brand.getLogoResource());
             intent.putExtra(DetailActivity.BRAND_NAME_KEY, brand.getName());
 
+            // Launch activity
             v.getContext().startActivity(intent);
         }
     }

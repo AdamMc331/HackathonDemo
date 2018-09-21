@@ -15,8 +15,8 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         // Get View references
-        val imageView = findViewById(R.id.my_image_view) as ImageView
-        val button = findViewById(R.id.my_button) as Button
+        val imageView: ImageView = findViewById(R.id.my_image_view)
+        val button: Button = findViewById(R.id.my_button)
 
         // Get extras from intent
         val logoResource = intent.getIntExtra(BRAND_LOGO_KEY, R.drawable.apple)
@@ -31,11 +31,11 @@ class DetailActivity : AppCompatActivity() {
         /**
          * A string key for the brand logo to be passed from one activity to another.
          */
-        val BRAND_LOGO_KEY = "brandLogo"
+        const val BRAND_LOGO_KEY = "brandLogo"
 
         /**
          * A string key for the brand name to be passed from one activity to another.
          */
-        val BRAND_NAME_KEY = "brandName"
+        const val BRAND_NAME_KEY = "brandName"
     }
 }

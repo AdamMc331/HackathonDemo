@@ -34,7 +34,7 @@ public class BrandActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
         // Setup RecyclerView
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.brand_list);
+        RecyclerView recyclerView = findViewById(R.id.brand_list);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }

@@ -32,8 +32,8 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         // Get View references
-        ImageView imageView = (ImageView) findViewById(R.id.my_image_view);
-        Button button = (Button) findViewById(R.id.my_button);
+        ImageView imageView = findViewById(R.id.my_image_view);
+        Button button = findViewById(R.id.my_button);
 
         // Get extras from intent
         int logoResource = getIntent().getIntExtra(BRAND_LOGO_KEY, R.drawable.apple);
