@@ -6,9 +6,13 @@ footer: @AdamMc331
 
 ---
 
-# Download Android Studio
+# Android Studio & Repo
 
-https://developer.android.com/studio/
+* https://developer.android.com/studio/
+* https://github.com/adammc331/hackathondemo
+* Includes Kotlin module
+
+[.build-lists: false]
 
 ---
 
@@ -539,10 +543,3 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.BrandViewHol
 ![inline](complete.gif)
 
 ---
-
-# Repo
-
-* https://github.com/adammc331/hackathondemo
-* Includes Kotlin module
-
-[.build-lists: false]
