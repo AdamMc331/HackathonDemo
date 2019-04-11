@@ -2,8 +2,10 @@ package com.adammcneilly.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * Displays detailed information for a Brand.
@@ -37,10 +39,17 @@ public class DetailActivity extends AppCompatActivity {
 
         // Get extras from intent
         int logoResource = getIntent().getIntExtra(BRAND_LOGO_KEY, R.drawable.apple);
-        String name = getIntent().getStringExtra(BRAND_NAME_KEY);
+        final String name = getIntent().getStringExtra(BRAND_NAME_KEY);
 
         // Set values
         imageView.setImageResource(logoResource);
         button.setText(name);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(DetailActivity.this, name, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
