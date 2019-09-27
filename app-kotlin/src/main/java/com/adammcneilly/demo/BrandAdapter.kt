@@ -1,7 +1,7 @@
 package com.adammcneilly.demo
 
 import android.content.Intent
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import android.widget.TextView
 /**
  * Adapter that is responsible for displaying a list of brands in a RecyclerView.
  */
-class BrandAdapter(private val brands: List<Brand>) : RecyclerView.Adapter<BrandAdapter.BrandViewHolder>() {
+class BrandAdapter(private val brands: List<Brand>) : androidx.recyclerview.widget.RecyclerView.Adapter<BrandAdapter.BrandViewHolder>() {
 
     /**
      * Called when the RecyclerView needs to create a ViewHolder for a specific view type.
@@ -32,7 +32,7 @@ class BrandAdapter(private val brands: List<Brand>) : RecyclerView.Adapter<Brand
 
     override fun getItemCount(): Int = brands.size
 
-    inner class BrandViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+    inner class BrandViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view), View.OnClickListener {
         private val logo: ImageView = view.findViewById(R.id.brand_image)
         private val name: TextView = view.findViewById(R.id.brand_name)
 

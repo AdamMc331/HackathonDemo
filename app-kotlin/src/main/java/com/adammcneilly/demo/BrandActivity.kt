@@ -1,9 +1,9 @@
 package com.adammcneilly.demo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 /**
  * Activity used to display a list of brands to the user.
@@ -21,10 +21,10 @@ class BrandActivity : AppCompatActivity() {
         val adapter = BrandAdapter(brandList)
 
         // Layout Manager
-        val linearLayoutManager = LinearLayoutManager(this)
+        val linearLayoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
 
         // Setup RecyclerView
-        val recyclerView = findViewById<RecyclerView>(R.id.brand_list)
+        val recyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.brand_list)
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.adapter = adapter
     }
