@@ -10,7 +10,6 @@ footer: @AdamMc331
 
 * https://developer.android.com/studio/
 * https://github.com/adammc331/hackathondemo
-* Includes Kotlin module
 
 [.build-lists: false]
 
@@ -31,7 +30,7 @@ footer: @AdamMc331
 
 ---
 
-# Live Coding?
+# Live Coding!
 
 ---
 
