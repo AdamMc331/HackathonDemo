@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hackathon Demo Kotlin</string>
+    <string name="app_name">Hackathon Demo</string>
     <string name="change_picture">Change Picture</string>
     <string name="animal">Animal</string>
     <string name="logo">logo</string>
